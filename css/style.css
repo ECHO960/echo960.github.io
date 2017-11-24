@@ -102,7 +102,8 @@ hr{
 }
 
 header{
-	width:100%;
+	width:75%;
+	padding-left: 12.5%;
 	margin:0% 0 0% 0;
 }
 
@@ -129,7 +130,7 @@ header h2{
 }
 	
 #slideshow{
-	width:100%;
+	width:45%;
 	margin-top:2%;
 }
 
@@ -137,6 +138,7 @@ header h2{
 /* - - - - - - - - - - - - - - -  Slider START  - - - - - - - - - - - - - - - */
 
 .html_carousel {
+	width: 38%
 }
 .html_carousel div.slide {
 	position: relative;
@@ -156,6 +158,42 @@ header h2{
 }
 
 /* - - - - - - - - - - - - - - -  Slider END  - - - - - - - - - - - - - - - */
+
+.main{
+	margin-top:4%;
+	width:90%;
+	padding-left: 5%;
+	float:left;
+	margin-bottom:2%;
+}
+
+.main h3{
+	font-family:Courier, Arial, Helvetica, sans-serif;
+	font-size:150%;
+	font-weight:bold;
+	text-align:center;
+	color:#191970	;
+	margin-bottom:0%;
+	text-shadow: 0 1px 1px #dadada;
+}
+
+.main p{
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:110%;
+	line-height:140%;
+}
+
+.main li{
+	font-family:Lato, Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:140%;
+	margin-left:20px;
+}
+
+.main p a{
+	color:#191970;
+	text-decoration:none;
+}
 
 .left{
 	margin-top:4%;
@@ -225,6 +263,16 @@ header h2{
 #work{
 	width:1000px;
 	margin:3% auto 3% auto;
+}
+
+.work h3{
+	font-family:Courier, Arial, Helvetica, sans-serif;
+	font-size:150%;
+	font-weight:bold;
+	text-align:center;
+	color:#191970	;
+	margin-bottom:0%;
+	text-shadow: 0 1px 1px #dadada;
 }
 
 .item{
