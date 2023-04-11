@@ -1,1 +1,84 @@
-theme = 'PaperMod'
+baseURL = "http://example.org/"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+# website title
+title = "Chunhui Liu"
+
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+
+# Author config
+[author]
+  name = "Chunhui Liu"
+  email = ""
+  link = ""
+
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+[params]
+  title = "Chunhui Liu"
+  description = "Chunhui Liu's personal website"
+  [params.header.title]
+    name = "Chunhui Liu"
+
+[params.social]
+    GitHub = "https://github.com/ECHO960"
+    Googlescholar = "https://scholar.google.com/citations?user=03DnyVsAAAAJ"
+    Email = "chunhuiliu960@gmail.com"
+
+[params.home]
+    # amount of RSS pages
+    # RSS 文章数目
+    rss = 10
+    # Home page profile
+    # 主页个人信息
+    [params.home.profile]
+      enable = true
+      # URL of avatar shown in home page
+      # 主页显示头像的 URL
+      avatarURL = "lch.jpg"
+      # title shown in home page (HTML format is supported)
+      # 主页显示的网站标题 (支持 HTML 格式)
+      title = "Chunhui Liu"
+      subtitle = "<p> I am a Computer Vision Engineer specializing in the development of video understanding models. My work focuses on creating end-to-end systems capable of perceiving, understanding, and reasoning like humans. <br><br> Prior to my current role, I gained valuable experience as a Computer Vision Engineer at Kuaishou Technology and as an Applied Scientist at Amazon AI. I obtain Master's degree in Computer Vision from <u><a href=\"https://www.ri.cmu.edu/\">Robotics Institute, Carnegie Mellon University </a> </u> and Bachelor's degree from <u><a href=\"https://eecs.pku.edu.cn/\"> EECS Peking University </a></u>. </p>"
+      typeit = false
