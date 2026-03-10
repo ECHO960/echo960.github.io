@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="POST DESCRIPTION HERE">
+  <title>POST TITLE · Chunhui Liu</title>
+  <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-name">Chunhui Liu</a>
+    <div class="nav-links">
+      <a href="/#about">About</a>
+      <a href="/#publications">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <button id="theme-btn" class="theme-btn" aria-label="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zM3 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0zm13.44-13.44a1 1 0 0 1 0-1.42l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4A9.084 9.084 0 0 0 12 3z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <header class="post-header">
+      <a href="index.html" class="post-back">← All posts</a>
+      <h1>POST TITLE HERE</h1>
+      <p class="post-meta">MONTH YEAR &nbsp;·&nbsp; CATEGORY</p>
+    </header>
+
+    <article class="post-body">
+
+      <p>
+        Opening paragraph goes here. Give the reader a clear idea of what this post is about.
+      </p>
+
+      <h2>Section Title</h2>
+
+      <p>
+        Body text goes here. You can use <strong>bold</strong>, <em>italic</em>,
+        and <a href="#">links</a>.
+      </p>
+
+      <ul>
+        <li>Bullet point one</li>
+        <li>Bullet point two</li>
+      </ul>
+
+      <pre><code>// Code block example
+const x = 42;</code></pre>
+
+      <blockquote>
+        A blockquote for emphasis.
+      </blockquote>
+
+      <h2>Conclusion</h2>
+
+      <p>
+        Wrap up the post here.
+      </p>
+
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chunhui Liu</p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('theme-btn');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved) root.dataset.theme = saved;
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) root.dataset.theme = 'dark';
+  btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>
+
+</body>
+</html>

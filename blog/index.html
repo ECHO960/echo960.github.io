@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog — Chunhui Liu">
+  <title>Blog · Chunhui Liu</title>
+  <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-name">Chunhui Liu</a>
+    <div class="nav-links">
+      <a href="/#about">About</a>
+      <a href="/#publications">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <button id="theme-btn" class="theme-btn" aria-label="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zM3 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0zm13.44-13.44a1 1 0 0 1 0-1.42l.7-.7a1 1 0 0 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4A9.084 9.084 0 0 0 12 3z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <section class="section" style="padding-top: 100px;">
+    <div class="container">
+      <h2>Blog</h2>
+      <p class="section-desc">Occasional thoughts on machine learning, research, and engineering.</p>
+
+      <!-- ============================================================
+           HOW TO ADD A NEW POST:
+           1. Duplicate the file `blog/_template.html` → `blog/your-post-slug.html`
+           2. Fill in the title, date, tag, and body content
+           3. Add a card below (copy the commented-out example)
+           ============================================================ -->
+
+      <!-- Example card (uncomment and fill when you have a post):
+      <div class="blog-grid">
+        <a href="my-first-post.html" class="blog-card" style="text-decoration:none;">
+          <span class="blog-card-tag">Machine Learning</span>
+          <span class="blog-card-title">My First Post</span>
+          <span class="blog-card-date">March 2026</span>
+          <span class="blog-card-excerpt">A short summary of what the post is about...</span>
+        </a>
+      </div>
+      -->
+
+      <p class="blog-empty" style="padding: 60px 0; text-align: center; color: var(--text-muted);">
+        No posts yet — check back soon.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chunhui Liu</p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('theme-btn');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved) root.dataset.theme = saved;
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) root.dataset.theme = 'dark';
+  btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>
+
+</body>
+</html>
